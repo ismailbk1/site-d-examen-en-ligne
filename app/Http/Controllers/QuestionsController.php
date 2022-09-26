@@ -246,7 +246,6 @@ public function visiteur(){
  ->groupBy('user_id' , 'technologies.id')
  ->get();
  
-//  dd($userpasseexment);
     $user_vrai = DB::table('resultats')
                  ->select('user_id', DB::raw('count(*) as total'))
                  ->where('etat' ,'vrai')
@@ -258,10 +257,6 @@ public function visiteur(){
                  ->where('etat' ,'faux')
                  ->groupBy('user_id')
                  ->get();
-           
-                // $user_faux->toArray();
-                // $user_faux->result_array();
-            //    dd($user_faux->user_id);
                $user=user::where('role' , '!=' ,'admin'  )->get();
                foreach ($user_faux as $i=>$value) 
                    $arrayidf[] = $value->user_id;
@@ -271,45 +266,12 @@ public function visiteur(){
                    $arrayidv[] = $value->user_id;
                 foreach ($user_vrai as $i=> $value) 
                    $arraytotalv[] = $value->total;
-        //  foreach ($arraytotalv as $i=> $value) 
-        //        print_r($arrayidf);
+     
 
 
             
    return view('/admin.visiteur')->with('user' , $user)->with('arrayidf' , $arrayidf)->with('arraytotalf' , $arraytotalf)->with('arrayidv' , $arrayidv)->with('arraytotalv' , $arraytotalv)->with('userpasseexment' ,$userpasseexment);
 }
-
-
-
-
-
-// supprimer le repponse de user
-// public function destoryreponse($id){
-//     $user=user::where('role' , '!=' ,'admin'  )->get();
-//     foreach ($user_faux as $i=>$value) 
-//         $arrayidf[] = $value->user_id;
-//      foreach ($user_faux as  $i=>$value) 
-//         $arraytotalf[] = $value->total;
-//         foreach ($user_vrai as  $i=>$value) 
-//         $arrayidv[] = $value->user_id;
-//      foreach ($user_vrai as $i=> $value) 
-//         $arraytotalv[] = $value->total;
-
-
-//  // print_r($arraytotalv['1']);
-
-
- 
-//     DB::delete('DELETE FROM resultats WHERE user_id = ?', [$id]);
-//    // echo ("User Record deleted successfully.");
-//     return redirect()->back()->with('arrayidf' , $arrayidf)->with('arraytotalf' , $arraytotalf)->with('arrayidv' , $arrayidv)->with('arraytotalv' , $arraytotalv);
-// ;
- 
-      
-  
-
-    
-// }
 
 
 public function destoryuser($id){
