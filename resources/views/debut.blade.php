@@ -77,8 +77,8 @@
                     <div class="row-fluid">
                         <div class="col-md-6 col-sm-6 text-left">
                             <p>
-                                <strong><i class="fa fa-phone"></i></strong> 2500251445&nbsp;&nbsp;
-                                <strong><i class="fa fa-envelope"></i></strong> <a href="mailto:#">Itech_concept@itech.com</a>
+                                <strong><i class="fa fa-phone"></i></strong> 25264400&nbsp;&nbsp;
+                                <strong><i class="fa fa-envelope"></i></strong> <a href="mailto:#">It koncept Tunisiat@it.com</a>
                             </p>
                  
                         </div><!-- end left -->
@@ -326,7 +326,7 @@
                       <h3 class="widget-title">Support</h3>
                       <div class="list-widget">   
                           <ul>
-                              <li><a href="#">Itech Concept</a></li>
+                              <li><a href="#">It koncept Tunisia</a></li>
                               
                             
                           </ul>
